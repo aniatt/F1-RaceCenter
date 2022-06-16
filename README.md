@@ -16,8 +16,6 @@ Prediction is done so by making use of predict.py once model is trained and save
 
 INPUT: .csv file formatted just like training data (can be generated from processing.py to ensure compattible formatting). Input data includes qualifying pace (as a gap to the driver on pole position). circuit_id, and constructor (see processing.py, final_data.csv for more details).
 
-OUTPUT: Currently, predict.py outputs a .txt file (or direct terimal output) that shows the starting grid for each race in a given season, alongside predictions based on RandomForestClassifier.
-
 ##### Results
 F1 Predictor 2020 Season Accuracy: 9/17 winners correctly predicted.
 
