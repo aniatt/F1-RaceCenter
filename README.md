@@ -31,21 +31,20 @@ Goal: Develop a sentiment analysis model to go along with predictions, to enhanc
 ### Historical Data
 Goal: Access historical data given user's preference to compare against at an instant.
 
-### Visualizer
+### Visualizer (IN PROGRESS)
 Goal: Combine all these tools into a singular platform so user has easy access at all times and experience a well - designed UI.
 
 
 ## Usage
 ### Current State
 1. Clone repository
-2. Use processing.py (make changes as you see fit depending on range of data you would like to work with) for preprocessing and formatting. (ONLY DO THIS STEP IF YOU DO NOT WANT TO USE final_data.tsv as your training data)
-3. Train RandomForestClassifier (ONLY DO THIS STEP IF YOU DO NOT WANT TO USE final_data.tsv as your training data)
-4. Ensure cloned repository contains a trained model (located in the model folder)
-5. Follow predict.py commands to execute script (Season and Round Number required)
-6. Output results to .txt file / terminal
+2. cd flask
+3. Execute app.py
+4. Visit generated html link in terminal and follow steps on page
 
-### TODO
-Goal: Devolop visualizer where user has the ability to select a time period / race for which they wish to see predictions. Visualizer will also contain relevant sentiment for that race as well as relevant historical data / metadata.
+### IN PROGRESS
+1. Better UI
+2. Deployment (updates to come to this README.md)
 
 
 ## Relevant Info
