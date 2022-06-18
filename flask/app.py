@@ -35,6 +35,7 @@ def predict():
     result = pd.DataFrame(columns = ['Starting Grid', 'Predicted Finish'])
     result['Starting Grid'] = startingGrid
     result['Predicted Finish'] = predictedClass
+    result = uniformNames(result)
 
     return render_template('index.html', column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip)
 

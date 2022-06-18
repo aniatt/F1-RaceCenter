@@ -7,17 +7,45 @@ from sklearn.ensemble import RandomForestClassifier
 
 # HELPER FUNCTION
 def tryconvert(x):
-    try:
-      if str(x) == '00.000':
-        return 0 
-      else:
-       if x != 0:
-         return (float(str(x).split(':')[1]) + (60 * float(str(x).split(':')[0])))
-       else: 
-         return 0
-    except:
-      return 0
+  try:
+    if str(x) == '00.000':
+      return 0 
+    else:
+      if x != 0:
+        return (float(str(x).split(':')[1]) + (60 * float(str(x).split(':')[0])))
+      else: 
+        return 0
+  except:
+    return 0
+
+def uniformNames(df):
+  uniformDict = {
+    'max_verstappen': 'MAX VERSTAPPEN',
+    'perez': 'SERGIO PEREZ',
+    'leclerc': 'CHARLES LECLERC',
+    'sainz': 'CARLOS SAINZ',
+    'hamilton': 'LEWIS HAMILTON',
+    'russell': 'GEORGE RUSSELL',
+    'norris': 'LANDO NORRIS',
+    'ricciardo': 'DANIEL RICCIARDO',
+    'ocon': 'ESTEBAN OCON',
+    'alonso': 'FERNANDO ALONSO',
+    'stroll': 'LANCE STROLL',
+    'vettel': 'SEBASTIAN VETTEL',
+    'bottas': 'VALTERRI BOTTAS',
+    'zhou': 'GUANYU ZHOU',
+    'gasly': 'PIERRE GASLY',
+    'tsunoda': 'YUKI TSUNODA',
+    'albon': 'ALEXANDER ALBON',
+    'latifi': 'NICHOLAS LATIFI',
+    'kevin_magnussen': 'KEVIN MAGNUSSEN',
+    'mick_schumacher': 'MICK SCHUMACHER',
+  }
   
+  df.replace({"Starting Grid": uniformDict, "Predicted Finish": uniformDict},inplace=True)
+  
+  return df
+
 # GET RAW DATA VIA ERGAST F1 API
 def getInput(raceYear, roundNum):
   df_train = pd.read_csv('data/dummy.csv')
