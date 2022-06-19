@@ -40,6 +40,13 @@ Goal: Combine all these tools into a singular platform so user has easy access a
 3. Execute app.py
 4. Visit generated html link in terminal and follow steps on page
 
+<p align="center"> Current State of User Interface </p>
+
+![Current User Interface](/img/race_classifier_html.png)
+
+![Current User Interface](/img/race_predict_html.png)
+
+
 ### IN PROGRESS
 1. Better UI
 2. Deployment (updates to come to this README.md)
