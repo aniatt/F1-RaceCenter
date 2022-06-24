@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import pickle
 
 from predict import *
+from sentiment import *
 
 app = Flask(__name__)
 with open('model/finalized_model.joblib', 'rb') as f: clf = pickle.load(f) 
@@ -36,6 +37,10 @@ def predict():
     result['Starting Grid'] = startingGrid
     result['Predicted Finish'] = predictedClass
     result = uniformNames(result)
+
+    # SENTIMENT ANALYSIS
+    sentiment = sentimentAnalysis(result)
+    result = result.join(sentiment)
 
     return render_template('index.html', column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip)
 

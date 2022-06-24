@@ -32,7 +32,7 @@ def uniformNames(df):
     'alonso': 'FERNANDO ALONSO',
     'stroll': 'LANCE STROLL',
     'vettel': 'SEBASTIAN VETTEL',
-    'bottas': 'VALTERRI BOTTAS',
+    'bottas': 'VALTTERI BOTTAS',
     'zhou': 'GUANYU ZHOU',
     'gasly': 'PIERRE GASLY',
     'tsunoda': 'YUKI TSUNODA',
