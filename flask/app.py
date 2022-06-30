@@ -39,8 +39,8 @@ def predict():
     result = uniformNames(result)
 
     # SENTIMENT ANALYSIS
-    sentiment = sentimentAnalysis(result)
-    result = result.join(sentiment)
+    #sentiment = sentimentAnalysis(result)
+    #result = result.join(sentiment)
 
     return render_template('index.html', column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip)
 
