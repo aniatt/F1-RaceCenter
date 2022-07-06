@@ -12,18 +12,16 @@ The model chosen for this project was a RandomForestClassifier. Keras GridSearch
 The model was saved using Pickle - see here for note regarding usage (Section 9.1.1): https://scikit-learn.org/stable/model_persistence.html
 
 ##### Prediction
-Prediction is done so by making use of predict.py once model is trained and saved.
-
-INPUT: .csv file formatted just like training data (can be generated from processing.py to ensure compattible formatting). Input data includes qualifying pace (as a gap to the driver on pole position). circuit_id, and constructor (see processing.py, final_data.csv for more details).
+Prediction is done so by running app.py and following prompts (SEE DEPLOYMENT UPDATES ON THIS PAGE). Predict.py outlines prediction framework/methods.
 
 ##### Results
 F1 Predictor 2020 Season Accuracy: 9/17 winners correctly predicted.
 
 Drawbacks: DNFs, weather, penalties are unpredictable in current state. Potential solution to account for this lies with incoorporation of Sentiment Analysis.
 
-Improvements: More input variables (driver standings, constructor standings, free practice pace***)
+Improvements: More input variables (driver standings, constructor standings, FP pace/results)
 
-### Sentiment Analysis
+### Sentiment Analysis (IN PROGRESS)
 Goal: Develop a sentiment analysis model to go along with predictions, to enhance race weekend info for a given race.
 
 ### Historical Data
