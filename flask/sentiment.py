@@ -1,9 +1,11 @@
 import requests
-import time
 from bs4 import BeautifulSoup
 import pandas as pd
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+# TODO
+# 1. Gather more accurate headline data for Sentiment Analysis: Driver Statements, Team Statements
 
 def getHeadlines(driverName):
     translateDict = {

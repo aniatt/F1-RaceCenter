@@ -11,7 +11,7 @@ with open('model/finalized_model.joblib', 'rb') as f: clf = pickle.load(f)
 def base():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     raceYear = request.form["season"]
     roundNum = request.form["round"]
