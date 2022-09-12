@@ -1,9 +1,5 @@
-import numpy as np
 import pandas as pd
-import pickle
 import requests
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
 
 # HELPER FUNCTION
 def tryconvert(x):
