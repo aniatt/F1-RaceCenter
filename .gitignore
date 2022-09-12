@@ -130,3 +130,15 @@ dmypy.json
 
 #
 .DS_Store
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info*
+dist/
+f1-env/
+env/
+venv/
+venv3/
+.venv/
+.pytest_cache
