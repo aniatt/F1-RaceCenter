@@ -44,7 +44,7 @@ def uniformNames(df):
 
 # GET RAW DATA VIA ERGAST F1 API
 def getInput(raceYear, roundNum):
-  df_train = pd.read_csv('data/dummy.csv')
+  df_train = pd.read_csv('app/data/dummy.csv')
   df = pd.DataFrame().reindex(columns = df_train.columns)
   data = {column: [] for column in df}
   data.update( {'constructor' : []} )

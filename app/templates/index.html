@@ -82,7 +82,7 @@
 <body>
     <h1>Formula One Race Center</h1>
     <h2>Race Classifier</h2>
-      <form action="{{url_for('predict')}}" method="post">
+      <form action="{{ url_for('predict') }}" method="post">
         <input type="text" name="season" placeholder="Year" required="required">
         <input type="text" name="round" placeholder="Round" required="required">
         <button type="submit" class="button">Predict</button>
