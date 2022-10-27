@@ -32,11 +32,9 @@ Goal: Combine all these tools into a singular platform so user has easy access a
 
 
 ## Usage
-### Current State
-1. Clone repository
-2. cd flask
-3. Execute app.py
-4. Visit generated html link in terminal and follow steps on page
+```console
+$ f1run
+```
 
 <p align="center"> Current State of User Interface </p>
 
