@@ -7,11 +7,11 @@ from sentiment import *
 app = Flask(__name__)
 with open('classifier/model/finalized_model.joblib', 'rb') as f: clf = pickle.load(f) 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def base():
     return render_template('index.html')
 
-@app.route('/predict/', methods=['POST'])
+@app.route('/predict/', methods=['GET', 'POST'])
 def predict():
     raceYear = request.form["season"]
     roundNum = request.form["round"]
@@ -42,7 +42,14 @@ def predict():
     #sentiment = sentimentAnalysis(result)
     #result = result.join(sentiment)
 
-    return render_template('index.html', column_names=result.columns.values, row_data=list(result.values.tolist()), zip=zip)
+    context = {
+        "raceYear": raceYear,
+        "roundNum": roundNum,
+        "column_names": result.columns.values,
+        "row_data": list(result.values.tolist())
+    }
+
+    return render_template('results.html', **context, zip=zip)
 
 if __name__ == "__main__":
     app.run()

@@ -68,7 +68,7 @@
         text-align: center;
         padding: 8px;
       }
-      body{
+      body {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -87,21 +87,21 @@
         <input type="text" name="round" placeholder="Round" required="required">
         <button type="submit" class="button">Predict</button>
       </form>
+      <!-- <br>
       <br>
-      <br>
-        <table>
-          <tr>
-            {% for col in column_names %}
-            <th>{{col}}</th>
-            {% endfor %}
-          </tr>
-          {% for row in row_data %}
-          <tr>
-            {% for col, row_ in zip(column_names, row) %}
-            <td>{{row_}}</td>
-            {% endfor %}
-          </tr>
+      <table>
+        <tr>
+          {% for col in column_names %}
+          <th>{{col}}</th>
           {% endfor %}
-        </table>
+        </tr>
+        {% for row in row_data %}
+        <tr>
+          {% for col, row_ in zip(column_names, row) %}
+          <td>{{row_}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table> -->
 </body>
 </html>

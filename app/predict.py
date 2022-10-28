@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 
+
 # HELPER FUNCTION
 def tryconvert(x):
   try:
@@ -13,6 +14,7 @@ def tryconvert(x):
         return 0
   except:
     return 0
+
 
 def uniformNames(df):
   uniformDict = {
@@ -41,6 +43,7 @@ def uniformNames(df):
   df.replace({"Starting Grid": uniformDict, "Predicted Finish": uniformDict},inplace=True)
   
   return df
+
 
 # GET RAW DATA VIA ERGAST F1 API
 def getInput(raceYear, roundNum):
